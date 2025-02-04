@@ -67,7 +67,7 @@ const HeroSection = () => {
           <div>
             {/* Botón "Contáctame" que abre WhatsApp */}
             <Link
-              href="https://wa.me/900899586"
+              href="https://wa.me/51900899586"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 text-white bg-gradient-to-r from-blue-500 to-purple-500 transform transition-transform duration-300 hover:scale-105"
