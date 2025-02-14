@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
+import { ProjectItem, ServiceItem } from "@/types/Projects";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -10,7 +12,6 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import Image from "next/image";
 import techIcons from "@/types/icons";
 
 import RidenOn from "../assets/RidenOn.png";
@@ -21,6 +22,10 @@ import Portfolio from "../assets/Portfolio.png";
 import ContigoVoy from "../assets/ContigoVoy.png";
 import AsdenPeru from "../assets/AsdenPeru.png";
 
+// Define interfaces for items
+
+type PortfolioItem = ProjectItem | ServiceItem;
+
 const Project = () => {
   // Estados para la paginación
   const [currentProjectPage, setCurrentProjectPage] = useState(1);
@@ -28,7 +33,7 @@ const Project = () => {
   const itemsPerPage = 2; // Número de elementos por página
 
   // Datos de proyectos personales
-  const ProjectsOwn = [
+  const ProjectsOwn: ProjectItem[] = [
     {
       id: 1,
       name: "Portfolio",
@@ -77,7 +82,7 @@ const Project = () => {
   ];
 
   // Datos de servicios profesionales
-  const services = [
+  const services: ServiceItem[] = [
     {
       id: 1,
       name: "ContigoVoy",
@@ -135,7 +140,7 @@ const Project = () => {
   };
 
   // Componente para renderizar tarjetas
-  const renderCard = (item: any, type: "project" | "service") => (
+  const renderCard = (item: PortfolioItem, type: "project" | "service") => (
     <div key={item.id} className="group relative">
       <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000"></div>
       <Card className="relative bg-gray-900/50 border-gray-800 overflow-hidden">
@@ -146,7 +151,7 @@ const Project = () => {
             className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
             fill
           />
-          {type === "project" && item.github && (
+          {type === "project" && "github" in item && item.github && (
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-900 opacity-0 group-hover:opacity-100 transition-all duration-300">
               <div className="absolute inset-0 flex items-center justify-center">
                 <a
@@ -181,7 +186,7 @@ const Project = () => {
               </div>
             ))}
           </div>
-          {type === "service" && (
+          {type === "service" && "company" in item && (
             <p className="text-sm text-purple-400 mt-2">
               Desarrollado para: {item.company}
             </p>
@@ -267,8 +272,7 @@ const Project = () => {
               {renderPagination(
                 currentProjectPage,
                 totalProjectPages,
-                setCurrentProjectPage,
-                "projects"
+                setCurrentProjectPage
               )}
             </div>
           </div>
@@ -285,8 +289,7 @@ const Project = () => {
               {renderPagination(
                 currentServicePage,
                 totalServicePages,
-                setCurrentServicePage,
-                "services"
+                setCurrentServicePage
               )}
             </div>
           </div>
