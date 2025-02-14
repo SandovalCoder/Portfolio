@@ -77,7 +77,7 @@ const HeroSection = () => {
 
             {/* Botón "Descargar CV" que descarga un archivo PDF */}
             <Link
-              href="/SANDOVAL_CV.docx.pdf"
+              href="/SANDOVAL_CV.pdf"
               download="CV_Luis_Sandoval.pdf"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mt-3 transform transition-transform duration-300 hover:scale-105"
             >

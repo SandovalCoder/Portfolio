@@ -22,10 +22,10 @@ const AboutSection = () => {
               </div>
             </div>
             <div className="flex flex-col space-y-8">
-              <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">
+              <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">
                 Sobre Mi
               </h2>
-              <p className="text-justify text-gray-300 leading-relaxed text-lg">
+              <p className="text-justify text-gray-300 leading-relaxed text-md">
                 Estudiante de 8vo ciclo de Ingeniería de Sistemas de Información
                 y Desarrollador Web apasionado por crear soluciones tecnológicas
                 innovadoras y eficientes. Con experiencia en frontend y backend,
