@@ -15,7 +15,7 @@ const techIcons = {
     PostgreSQL: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
     Express: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     HeroUI: "https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/heroui/heroui-plain.svg",
-    ShadcnUI: "https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/shadcnui/shadcnui-original.svg",
+    Vite: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg",
 };
 
 
