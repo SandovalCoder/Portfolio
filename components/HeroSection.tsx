@@ -9,11 +9,11 @@ import { Github, Linkedin, Mail } from "lucide-react";
 const HeroSection = () => {
   const stats = [
     {
-      value: "1+",
-      label: "Años de experiencia",
+      value: "4",
+      label: "Meses de experiencia",
     },
     {
-      value: "10+",
+      value: "5+",
       label: "Proyectos completados",
     },
   ];
