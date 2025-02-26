@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { ProjectItem, ServiceItem } from "@/types/Projects";
+import { Eye } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -43,6 +44,7 @@ const Project = () => {
       description:
         "Mi portafolio personal construido con Next.js, Tailwind CSS, TypeScript y Framer Motion.",
       github: "https://github.com/SandovalCoder/Portfolio",
+      demo: "https://portfolio-tau-coral-53.vercel.app/",
     },
     {
       id: 2,
@@ -52,6 +54,7 @@ const Project = () => {
       description:
         "NovaTech es una aplicación de comercio electrónico moderna dedicada a la venta de tecnologías de punta: smartphones, laptops, televisores y más.",
       github: "https://github.com/SandovalCoder/NovaTech",
+      demo: "https://nova-tech-two.vercel.app/",
     },
     {
       id: 3,
@@ -61,6 +64,7 @@ const Project = () => {
       description:
         "RideOn es una plataforma de compra de autos en línea con diseño responsivo, construida con HTML5, CSS3 y Bootstrap.",
       github: "https://github.com/SandovalCoder/RideOn_Landing_Page",
+      demo: "https://rideon-y.vercel.app/",
     },
     {
       id: 4,
@@ -163,7 +167,7 @@ const Project = () => {
           />
           {type === "project" && "github" in item && item.github && (
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-900 opacity-0 group-hover:opacity-100 transition-all duration-300">
-              <div className="absolute inset-0 flex items-center justify-center">
+              <div className="absolute inset-0 flex items-center justify-center space-x-4">
                 <a
                   href={item.github}
                   target="_blank"
@@ -176,6 +180,14 @@ const Project = () => {
                     width={30}
                     height={30}
                   />
+                </a>
+                <a
+                  href={item.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-500 p-4 rounded-full hover:bg-blue-600 transition-all duration-300 transform hover:scale-110"
+                >
+                  <Eye size={30} />
                 </a>
               </div>
             </div>

@@ -7,6 +7,7 @@ export interface ProjectItem {
     image: string | StaticImageData;
     description: string;
     github?: string;
+    demo?: string;
 }
 
 export interface ServiceItem {
