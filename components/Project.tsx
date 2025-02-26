@@ -185,7 +185,7 @@ const Project = () => {
                   href={item.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-500 p-4 rounded-full hover:bg-blue-600 transition-all duration-300 transform hover:scale-110"
+                  className="bg-blue-500 p-4 rounded-full hover:bg-purple-600 transition-all duration-300 transform hover:scale-110"
                 >
                   <Eye size={30} />
                 </a>
