@@ -9,13 +9,16 @@ const TabsComponent = () => {
   const experience = {
     title: "Desarrollador Web Jr",
     company: "NeonHouseLed",
-    date: "Diciembre 2024 - Presente",
+    date: "Diciembre 2024 - Marzo 2025",
     responsibilities: [
-      "Desarrollo y optimización de módulos administrativos para la plataforma 'ContigoVoy', utilizando HTML5, CSS3, Bootstrap y JavaScript.",
-      "Implementación y depuración del backend con PHP y MySQL, mejorando la estabilidad del sistema en un 30%.",
-      "Optimización de rendimiento y accesibilidad, logrando un puntaje del 70% en Google Lighthouse.",
-      "Mejoras en SEO, aumentando la visibilidad de la plataforma en motores de búsqueda.",
-      "Colaboración en la migración tecnológica hacia Next.js, TypeScript, Tailwind CSS, PostgreSQL y Supabase, diseño de componentes clave.",
+      "Optimicé el panel de administración de ContigoVoy, mejorando su rendimiento, accesibilidad y experiencia de usuario mediante el uso de HTML5, CSS3, JavaScript y Bootstrap.",
+      "Corregí errores en el backend (PHP/MySQL) que impedían la correcta comunicación con el frontend.",
+      "Diseñe formularios y elementos de navegación, logrando una interfaz más intuitiva y responsive.",
+      "Participé en la migración tecnológica de ContigoVoy hacia Next.js, TypeScript, Tailwind CSS, Laravel y MySQL.",
+      "Integré componentes reutilizables utilizando librerías como HeroUI y Shadcn, e implementé animaciones para mejorar la interactividad.",
+      "Lideré el desarrollo de la página web de AsdenPeru, utilizando Next.js, TypeScript, Tailwind CSS, Laravel y MySQL.",
+      "Diseñé interfaces modernas y responsive, asegurando una experiencia de usuario óptima.",
+      "Facilité integraciones con APIs para mejorar la funcionalidad del sitio web.",
     ],
   };
 
@@ -132,6 +135,9 @@ const TabsComponent = () => {
                   </p>
                   <p className="text-gray-300">
                     Octavo ciclo - Tercio superior
+                  </p>
+                  <p className="text-gray-400 text-sm">
+                    Becario Pronabec Beca 18 por Excelencia Académica
                   </p>
                   <p className="text-gray-400 text-sm">2021 - Presente</p>
                 </div>
