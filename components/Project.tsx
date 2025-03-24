@@ -23,6 +23,7 @@ import Portfolio from "../assets/Portfolio.png";
 import ContigoVoy from "../assets/ContigoVoy.png";
 import AsdenPeru from "../assets/AsdenPeru.png";
 import NovaTech from "../assets/NovaTech.png";
+import CodeJourney from "../assets/CodeJourney.png";
 
 // Define interfaces for items
 
@@ -48,6 +49,23 @@ const Project = () => {
     },
     {
       id: 2,
+      name: "CodeJourney",
+      technologies: [
+        "TypeScript",
+        "Tailwind",
+        "Nextjs",
+        "Express",
+        "MongoDB",
+        "Nodejs",
+      ],
+      image: CodeJourney,
+      description:
+        "CodeJourney es una plataforma social de blogging técnico diseñada para desarrolladores. Permite publicar y compartir conocimientos mediante posts, utilizando una arquitectura moderna y escalable.",
+      github: "https://github.com/SandovalCoder/front-CodeJourney",
+      demo: "",
+    },
+    {
+      id: 3,
       name: "NovaTech",
       technologies: ["Vite", "TypeScript", "Tailwind"],
       image: NovaTech,
@@ -57,7 +75,7 @@ const Project = () => {
       demo: "https://nova-tech-two.vercel.app/",
     },
     {
-      id: 3,
+      id: 4,
       name: "RidenOn",
       technologies: ["HTML5", "CSS3", "Bootstrap"],
       image: RidenOn,
@@ -67,7 +85,7 @@ const Project = () => {
       demo: "https://rideon-y.vercel.app/",
     },
     {
-      id: 4,
+      id: 5,
       name: "Calculator",
       technologies: ["HTML5", "CSS3", "Bootstrap", "JavaScript"],
       image: Calculator,
@@ -76,7 +94,7 @@ const Project = () => {
       github: "https://github.com/SandovalCoder/Calculator",
     },
     {
-      id: 5,
+      id: 6,
       name: "UniTrack",
       technologies: ["HTML5", "CSS3", "Bootstrap", "JavaScript"],
       image: UniTrack,
@@ -85,7 +103,7 @@ const Project = () => {
       github: "https://github.com/SandovalCoder/PoderadoUniversitario",
     },
     {
-      id: 6,
+      id: 7,
       name: "OrganAlzer",
       technologies: ["HTML5", "CSS3", "JavaScript"],
       image: OrganAlzer,
