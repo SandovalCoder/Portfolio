@@ -4,7 +4,7 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, MessageCircle, Download } from "lucide-react";
 
 const HeroSection = () => {
   const stats = [
@@ -40,10 +40,11 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="lg:py-16" id="home">
-      <div className="grid grid-cols-1 sm:grid-cols-12">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
+    <section className="bg-black text-white py-16 lg:py-16" id="home">
+      <div className="container mx-auto px-4 md:px-8 lg:px-12">
+        <div className="grid grid-cols-1 sm:grid-cols-12">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
@@ -54,7 +55,7 @@ const HeroSection = () => {
             </span>
             <br />
             <TypeAnimation
-              sequence={["SandovalCoder", 1000, "Desarrollador Web", 1000]}
+              sequence={["Vilder Sandoval", 1000, "Desarrollador Web", 1000]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
@@ -64,26 +65,26 @@ const HeroSection = () => {
             Enfocado en Tecnología y Soluciones Innovadoras
           </p>
 
-          <div>
+          <div className="flex flex-col sm:flex-row gap-4 mb-8">
             {/* Botón "Contáctame" que abre WhatsApp */}
             <Link
               href="https://wa.me/51900899586"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 text-white bg-gradient-to-r from-blue-500 to-purple-500 transform transition-transform duration-300 hover:scale-105"
+              className="px-6 py-3 rounded-full text-white bg-gradient-to-r from-green-500 to-green-600 hover:bg-gradient-to-br transform transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
             >
-              Contáctame
+              <MessageCircle size={20} />
+              <span>Contáctame</span>
             </Link>
 
             {/* Botón "Descargar CV" que descarga un archivo PDF */}
             <Link
               href="/SANDOVAL_CV.pdf"
               download="CV_Luis_Sandoval.pdf"
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mt-3 transform transition-transform duration-300 hover:scale-105"
+              className="px-6 py-3 rounded-full text-white bg-gradient-to-r from-blue-500 to-purple-500 hover:bg-gradient-to-br transform transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
             >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 text-white">
-                Descargar CV
-              </span>
+              <Download size={20} />
+              <span>Descargar CV</span>
             </Link>
           </div>
 
@@ -95,7 +96,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
-                className="bg-gray-900/50 backdrop-blur-sm p-4 rounded-2xl border border-gray-800 transition-all duration-300"
+                className="bg-gray-900/50  backdrop-blur-sm p-4 rounded-2xl border border-gray-800 transition-all duration-300"
               >
                 <p className="text-3xl font-bold text-white mb-1 text-center">
                   {stat.value}
@@ -140,7 +141,8 @@ const HeroSection = () => {
               height={400}
             />
           </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

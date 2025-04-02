@@ -5,7 +5,7 @@ import TabsComponent from "./Tabs";
 
 const AboutSection = () => {
   return (
-    <section className="w-full text-white py-20" id="about">
+    <section className="w-full bg-black text-white py-20" id="about">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center mb-20">

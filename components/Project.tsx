@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { ProjectItem, ServiceItem } from "@/types/Projects";
 import { Eye } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -14,139 +13,16 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import techIcons from "@/types/icons";
+import { ProjectsOwn, services } from "@/types/listprojects";
+import type { Project, Service } from "@/types/listprojects";
 
-import RidenOn from "../assets/RidenOn.png";
-import Calculator from "../assets/Calculator.png";
-import UniTrack from "../assets/UniTrack.png";
-import OrganAlzer from "../assets/OrganAlzer.png";
-import Portfolio from "../assets/Portfolio.png";
-import ContigoVoy from "../assets/ContigoVoy.png";
-import AsdenPeru from "../assets/AsdenPeru.png";
-import NovaTech from "../assets/NovaTech.png";
-import CodeJourney from "../assets/CodeJourney.png";
 
-// Define interfaces for items
-
-type PortfolioItem = ProjectItem | ServiceItem;
 
 const Project = () => {
   // Estados para la paginación
   const [currentProjectPage, setCurrentProjectPage] = useState(1);
   const [currentServicePage, setCurrentServicePage] = useState(1);
-  const itemsPerPage = 2; // Número de elementos por página
-
-  // Datos de proyectos personales
-  const ProjectsOwn: ProjectItem[] = [
-    {
-      id: 1,
-      name: "Portfolio",
-      technologies: ["Nextjs", "Tailwind", "TypeScript"],
-      image: Portfolio,
-      description:
-        "Mi portafolio personal construido con Next.js, Tailwind CSS, TypeScript y Framer Motion.",
-      github: "https://github.com/SandovalCoder/Portfolio",
-      demo: "https://portfolio-tau-coral-53.vercel.app/",
-    },
-    {
-      id: 2,
-      name: "CodeJourney",
-      technologies: [
-        "TypeScript",
-        "Tailwind",
-        "Nextjs",
-        "Express",
-        "MongoDB",
-        "Nodejs",
-      ],
-      image: CodeJourney,
-      description:
-        "CodeJourney es una plataforma social de blogging técnico diseñada para desarrolladores. Permite publicar y compartir conocimientos mediante posts, utilizando una arquitectura moderna y escalable.",
-      github: "https://github.com/SandovalCoder/front-CodeJourney",
-      demo: "",
-    },
-    {
-      id: 3,
-      name: "NovaTech",
-      technologies: ["Vite", "TypeScript", "Tailwind"],
-      image: NovaTech,
-      description:
-        "NovaTech es una aplicación de comercio electrónico moderna dedicada a la venta de tecnologías de punta: smartphones, laptops, televisores y más.",
-      github: "https://github.com/SandovalCoder/NovaTech",
-      demo: "https://nova-tech-two.vercel.app/",
-    },
-    {
-      id: 4,
-      name: "RidenOn",
-      technologies: ["HTML5", "CSS3", "Bootstrap"],
-      image: RidenOn,
-      description:
-        "RideOn es una plataforma de compra de autos en línea con diseño responsivo, construida con HTML5, CSS3 y Bootstrap.",
-      github: "https://github.com/SandovalCoder/RideOn_Landing_Page",
-      demo: "https://rideon-y.vercel.app/",
-    },
-    {
-      id: 5,
-      name: "Calculator",
-      technologies: ["HTML5", "CSS3", "Bootstrap", "JavaScript"],
-      image: Calculator,
-      description:
-        "Calculadora simple con operaciones básicas y diseño responsivo, construida con HTML, CSS, Bootstrap 5 y JavaScript.",
-      github: "https://github.com/SandovalCoder/Calculator",
-    },
-    {
-      id: 6,
-      name: "UniTrack",
-      technologies: ["HTML5", "CSS3", "Bootstrap", "JavaScript"],
-      image: UniTrack,
-      description:
-        "UniTrack es una plataforma para gestionar y hacer seguimiento de tu rendimiento académico. Registra tus cursos, calcula tu promedio ponderado y más.",
-      github: "https://github.com/SandovalCoder/PoderadoUniversitario",
-    },
-    {
-      id: 7,
-      name: "OrganAlzer",
-      technologies: ["HTML5", "CSS3", "JavaScript"],
-      image: OrganAlzer,
-      description:
-        "OrganAIzer es un asistente de productividad inteligente que te ayuda a organizar tareas, establecer recordatorios y gestionar tu tiempo de manera eficiente.",
-      github: "https://github.com/SandovalCoder/Coder.github.io",
-    },
-  ];
-
-  // Datos de servicios profesionales
-  const services: ServiceItem[] = [
-    {
-      id: 1,
-      name: "ContigoVoy",
-      technologies: [
-        "Nextjs",
-        "TypeScript",
-        "Supabase",
-        "Tailwind",
-        "PostgreSQL",
-      ],
-      image: ContigoVoy,
-      description:
-        "Plataforma integral de atención psicológica que ofrece terapias virtuales, reserva de citas y acompañamiento personalizado para usuarios en su proceso de bienestar emocional.",
-      company: "NeonHouseLed",
-    },
-    {
-      id: 2,
-      name: "AsdenPerú",
-      technologies: [
-        "Nextjs",
-        "TypeScript",
-        "MongoDB",
-        "Express",
-        "Nodejs",
-        "Tailwind",
-      ],
-      image: AsdenPeru,
-      description:
-        "Plataforma digital que centraliza la gestión y difusión de iniciativas de desarrollo sostenible.\nImpulsa la innovación, transparencia y compromiso social para un Perú más justo.",
-      company: "NeonHouseLed",
-    },
-  ];
+  const itemsPerPage = 4; // Número de elementos por página
 
   // Lógica de paginación para proyectos
   const indexOfLastProject = currentProjectPage * itemsPerPage;
@@ -172,7 +48,7 @@ const Project = () => {
   };
 
   // Componente para renderizar tarjetas
-  const renderCard = (item: PortfolioItem, type: "project" | "service") => (
+  const renderCard = (item: Project | Service, type: "project" | "service") => (
     <div key={item.id} className="group relative">
       <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000"></div>
       <Card className="relative bg-gray-900/50 border-gray-800 overflow-hidden">

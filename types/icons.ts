@@ -14,7 +14,6 @@ const techIcons = {
     Supabase: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg",
     PostgreSQL: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
     Express: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    HeroUI: "https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/heroui/heroui-plain.svg",
     Vite: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg",
 };
 

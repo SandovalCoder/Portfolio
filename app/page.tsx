@@ -6,10 +6,12 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen bg-black text-white">
+    <div>
       <Header />
-      <main className="pt-16">
-        <div className="container mx-auto px-8 md:px-16 lg:px-24">
+      <main>
+        <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* <div className="container mx-auto px-4 md:px-8 lg:px-12"> */}
+
           <HeroSection />
           <AboutSection />
           <Project />
